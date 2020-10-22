@@ -21,6 +21,8 @@
     <link rel="stylesheet" href="C:/Users/Carol/Documents/GitHub/HTML/turismoreal-html/turismo-real/css/micss.css">
     <script src="C:/Users/Carol/Documents/GitHub/HTML/turismoreal-html/turismo-real/js/vendor/modernizr-2.8.3.min.js"></script>
     <script src="C:/Users/Carol/Documents/GitHub/HTML/turismoreal-html/turismo-real/js/validafecha.js"></script>
+    <script src="C:\Users\Carol\Documents\GitHub\HTML\turismoreal-html\turismo-real\js\functions.js"></script>
+    
 </head>
 
 <body onload="validDate()">
@@ -209,29 +211,32 @@
                         <form action="#" method="post" class="search-form">
                             <div class="form-container fix">
                                 <div class="box-select">
+                                    <h5>Fecha de Ingreso</h5>
                                     <div class="select date">
-                                        <input id="arrive" type="date" name="arrive">
+                                        <input id="arrive" type="date" name="arrive" value="2020-12-31" disabled>
                                     </div>
+                                    <h5>Fecha de Salida</h5>
                                     <div class="select date">
-                                        <input id="departure" type="date" name="departure">
+                                        <input id="departure" type="date" name="departure" value="2021-01-05" disabled>
                                     </div>
+                                    <h5>Cantidad de Huéspedes</h5>
                                     <div class="select arrow">
-                                        <select name="huespedes">
+                                        <select name="huespedes" disabled>
                                             <option>Huéspedes</option>
-                                            <option>1</option>
-                                            <option>2</option>
-                                            <option>3</option>
-                                            <option>4</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4" selected>4</option>
                                         </select>
                                     </div>
                                 </div>
-                                <a href="pago.html" class="btn btn-primary btn-lg search default-btn" role="button">Reservar</a>
+                                <a href="C:/Users/Carol/Documents/GitHub/HTML/turismoreal-html/turismo-real/index.html" class="btn btn-primary btn-lg search default-btn" role="button">Nueva Búsqueda  </a>
                                 <!--button type="submit" class="search default-btn">Reservar</button-->
                             </div>
                         </form>
                     </div>
                     <div class="sidebar-widget">
-                        <table class="tabla">
+                        <table class="tabla" >
                             <h3 class="room-details-title">MONTO A PAGAR</h3>
                             <tr>
                                 <td><i class="fas fa-money-bill-wave"></i></td>
@@ -302,10 +307,6 @@
             <div class="row">
                 <div class="col-lg-9 col-md-8">
                     <h3 class="room-details-title">SERVICIOS ADICIONALES</h3>
-                    <label class="switch">
-                        <input type="checkbox">
-                        <span class="slider round"></span>
-                    </label>
                     <!-- Tab links -->
                     <div class="tab">
                         <button class="tablinks" onclick="openCity(event, 'TOURS')">TOURS</button>
@@ -313,44 +314,58 @@
                     </div>
                     <!-- Tab content -->
                     <div id="TOURS" class="tabcontent">
-                        <h3>Organiza desde ya tu estadía con los tours guiados</h3>
-                        <label class="container">Tour 1 
-                            <input type="checkbox" checked="checked">
-                            <span class="checkmark"></span>
-                          </label>
-                          <label class="container">Tour 2
-                            <input type="checkbox">
-                            <span class="checkmark"></span>
-                          </label>
-                          <label class="container">Tour 3
-                            <input type="checkbox">
-                            <span class="checkmark"></span>
-                          </label>
-                          <label class="container">Tour 4
-                            <input type="checkbox">
-                            <span class="checkmark"></span>
-                          </label>
+                        <h3>Organiza desde ya tu estadía con tours guiados</h3>
+                        <label for="tour" class="content-input">
+                            <input type="checkbox" name="tour" id="tour" value="tour">Tour 1
+                            <i></i>
+                        </label>
+                        <label for="tour2" class="content-input">
+                            <input type="checkbox" name="tour2" id="tour2" value="tour2">Tour 2
+                            <i></i>
+                        </label>
+                        <h3>Cantidad de Pasajeros</h3>
+                        <div class="content-select">
+                            <select>
+                                <option>Option 1</option>
+                                <option>Option 2</option>
+                                <option>Option 3</option>
+                            </select>
+                            <i></i>
+                        </div>
                     </div>
                     
-                    <div id="TRASLADO" class="tabcontent">
-                        <h4>Elige tu oción de traslado</h4>
-                        <p>Quieres estar más comodo y llegar a tiempo, considerá nuestros servicios de traslados</p>
-                        <form action="#">
-                            <label for="quantity">Quantity (between 1 and 5):</label>
-                            <input type="number" id="quantity" name="quantity" min="1" max="5">
-                            <label class="container">Solo Ida
-                                <input type="radio" name="radio">
-                                <span class="checkmark"></span>
-                            </label>
-                            <label class="container">Solo Retorno
-                                <input type="radio" name="radio">
-                                <span class="checkmark"></span>
-                            </label>
-                            <label class="container">Ida y Vuelta
-                                <input type="radio" name="radio">
-                                <span class="checkmark"></span>
-                            </label>
-                        </form>
+                    <div id="TRASLADO" class="tabcontent" style="background-color: #f1f1f1;">
+                        <h3>Llega a tiempo y seguro a los destinos</h3>
+                        <br>
+                        <label for="ida" class="content-input">
+                            <input type="checkbox" name="ida" id="ida" value="ida"> Traslado a la Propiedad
+                            <i></i>
+                        </label>
+                        <label for="vuelta" class="content-input">
+                            <input type="checkbox" name="vuelta" id="vuelta" value="vuelta">Traslado a Terminal / Aeropuerto
+                            <i></i>
+                        </label>
+                        <br>
+                        <h3>Cantidad de Pasajeros</h3>
+                        <div class="content-select">
+                            <select>
+                                <option>Option 1</option>
+                                <option>Option 2</option>
+                                <option>Option 3</option>
+                            </select>
+                            <i></i>
+                        </div>
+                 </div>
+        
+                    <br>
+                    <div>
+                        <h3 class="room-details-title">INFORMACIÓN DE ACOMPAÑANTES  </h3>   
+                        <div class="w3l-form-group">
+                            <i class="fas fa-user-plus"></i>
+                            <input type="text" class="form-control" placeholder="NOMBRES APELLIDOS" required minlength="3" maxlength="50"   />
+                            
+
+                        </div>
                         
                     </div>
                 </div>

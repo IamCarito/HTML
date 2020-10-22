@@ -198,10 +198,10 @@ input {
     box-shadow: none;
     color: #606060;
     font-size: 14px;
-    height: 40px;
-    padding-left: 10px;
+    height: 20px;
     width: 100%;
 }
+inp
 select {
     background: #ffffff none repeat scroll 0 0;
     border: 0 none;
@@ -664,3 +664,6 @@ textarea:focus {
 .breadcrumb-bar a {color: #fff;}
 .breadcrumb-bar a:hover {color: #00bcd4;}
 .breadcrumb-bar li:first-child {margin-left: 0;}
+
+
+

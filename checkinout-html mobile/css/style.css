@@ -461,6 +461,7 @@ form.search-form {
     margin-bottom: 34px;
     position: relative;
     text-transform: uppercase;
+    padding: 15px 5px;
 }
 
 .room-details-title::after {
@@ -471,6 +472,7 @@ form.search-form {
     left: 0;
     position: absolute;
     width: 90px;
+    padding: 15px 5px;
 }
 
 .room-details-text {

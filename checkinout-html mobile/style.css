@@ -1332,6 +1332,7 @@ span.image.s-img {
     margin-bottom: 34px;
     position: relative;
     text-transform: uppercase;
+    padding: 20px 15px;
 }
 
 .room-details-title::after {
@@ -1866,7 +1867,7 @@ p.w3l-register-p {
 .group {
     display: flex;
     padding: 15px 5px;
-    background-color: #ffffff;
+    background-color: #032139;
 }
 
 .group i {
@@ -1887,6 +1888,7 @@ p.w3l-register-p {
     letter-spacing: 2px;
     margin-bottom: 10px;
     font-weight: 700;
+    padding: 5px 20px;
 }
 
 input[type="text"],

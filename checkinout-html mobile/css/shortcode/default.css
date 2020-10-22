@@ -36,12 +36,13 @@ Please do not change anything here! write in a custom.css file if required!
 @import url('https://fonts.googleapis.com/css?family=Lato:400,700|Open+Sans|Raleway:400,700');
 html, body {height: 100%;}
 body {
-	color: #032139;
+	color: #ffff;
 	font-size: 14px;
 	font-style: normal;
 	font-weight: 400;
 	line-height: normal;
     font-family: 'Lato', sans-serif;
+    background-color: #032139;
 }
 .clear{clear:both}
 .fix {overflow: hidden}
@@ -73,7 +74,7 @@ a:focus,
 }
 a:focus,
 a:hover {
-    color: #303030;
+    color: #00BCD4;
     text-decoration: none;
 }
 a:active, a:hover {
@@ -145,7 +146,7 @@ ul{
     color: #606060;
 }
 .default-btn {
-    background: #005070 none repeat scroll 0 0;
+    background: #032139 none repeat scroll 0 0;
     color: #ffffff;
     font-family: "Raleway",sans-serif;
     font-size: 14px;
