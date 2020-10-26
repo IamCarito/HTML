@@ -14,6 +14,7 @@
         <!--link href="/your-path-to-fontawesome/css/all.css" rel="stylesheet"-->
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <!--link rel="stylesheet" href="css/font-awesome.min.css"-->
+        <link rel="stylecheet" href="css/check-box.css">    
         <link rel="stylesheet" href="css/shortcode/shortcodes.css">
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="css/responsive.css">
@@ -34,34 +35,56 @@
                     </div>
                 </div>
             </div>
+            <div class="mobile-menu-area">
+                <div class="container">
+                    <div class="mobile-menu">
+                        <nav id="dropdown">
+                            <ul>
+                                <li><a href="login.html">CERRAR SESIÓN</a></li>
+                                <li><a href="#">CHECK-IN </a>
+                                    <ul class="submenu">
+                                        <li class="subitem"><a href="busqueda.html">BUSCAR PRIPIEDAD</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">CHECK-OUT </a>
+                                    <ul class="submenu">
+                                        <li class="subitem"><a href="#">CHECK-IN</a></li>
+                                        <li><a href="#">ROOM DETAILS</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="#">CHECK-LIST PROPIEDAD</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <!-- Mobile Menu Area end -->
         </header>
         <!-- Header Area End -->
-        <!--LOGIN FORM START-->
         <section>
+            <br><br>
+            <h3 class="room-details-title">CHECK-IN<br></h3>
+            <h1 style="margin-left: 50px;">Datos Arrendatario</h1>
             <div class=" w3l-form-group">
-                <h2 style="padding-right: 40px;">Inicio Sesión</h2>
-                <div class=" w3l-form-group">
-                    <label>Usuario:</label>
-                    <div class="group">
-                        <i class="fas fa-user"></i>
-                        <input type="email" class="form-control" placeholder="email@dominio.com" required/>
-                    </div>
+                <div class="group">
+                    <i class="fas fa-user"></i>   
+                    <input type="text" class="form-control" value="Carol Stephanie" disabled style="margin-left: 5px; margin-right: 10px;"/>
+                  
+                </div> 
+                <div class="group">
+                    <i class="fas fa-user"></i> 
+                    <input type="text" class="form-control" value="Valdebenito" disabled style="margin-right: 5px; margin-left: 5px;"/>   
+                    <input type="text" class="form-control" value="Valdenegro" disabled style="margin-right: 10px;"/>
                 </div>
-                <div class=" w3l-form-group">
-                    <label>Contraseña</label>
-                    <div class="group">
-                        <i class="fas fa-unlock-alt"></i>
-                        <input type="password" class="form-control" placeholder="Contraseña" required="required"  style="width: 224px"/>
-                    </div>
+                <div class="group">
+                    <i class="fas fa-id-card"></i>
+                    <input type="text" class="form-control" value="17705980-3" disabled style="margin-left: 5px; margin-right: 10px;"/>
                 </div>
-                <div class="forgot">
-                    <a href="#" style="padding-left: 40px;">Olvidaste tu Contraseña?</a>
-                </div>
-                <a href="mainmenu.html" class="btn btn-primary btn-lg " role="button" style="margin-left: 80px;">Iniciar Sesión</a>
-                <!--button type="submit">Login</button-->
+                    <br>
+                    <label>Si los datos no son válidos no es posible proseguir con la entrega de la propiedad, al menos que exista autorización prevía por e-mail desde administración</label>
+                    <a href="aceptacion_in.html" class="btn btn-primary" role="button" style="margin-left: 130px; height: 34px;">Siguiente</a> 
             </div>
         </section>
-        <!--LOGIN FORM ENF-->
         <footer>
             <div class="footer-bottom-area bg-black">
                 <div class="container">
@@ -90,5 +113,6 @@
         <script src="js/jquery.magnific-popup.js"></script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
+    </body>
 
 </html>
